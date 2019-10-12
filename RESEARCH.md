@@ -10,7 +10,8 @@ Apps that already have to scan files/directories recursively.
 * [qDirStat](https://github.com/shundhammer/qdirstat)
 * [`du`](https://git.savannah.gnu.org/cgit/coreutils.git/tree/src/du.c)
 * [Duc](https://github.com/zevv/duc)
-* []()
+* [nftw](https://stackoverflow.com/a/472727/70876)
+* [readdir example](https://stackoverflow.com/a/30379506/70876)
 
 
 ## Design Ideas
