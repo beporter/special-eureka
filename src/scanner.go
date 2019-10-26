@@ -16,9 +16,11 @@ func dirSize(path string) (uint64, error) {
 
 	for _, f := range files {
 		if f.IsDir() && f.Name() != "." && f.Name() != ".." {
+			fmt.Fprintf(os.Stderr, "dirSize(): Recursing into dir. (%s)\n", path + "/" + f.Name())
 			subdirSum, err = dirSize(path + "/" + f.Name())
 			sum += uint64(subdirSum)
 		} else {
+			fmt.Fprintf(os.Stderr, "dirSize(): File size (%s): (%d)\n", path + "/" + f.Name(), f.Size());
 			sum += uint64(f.Size())
 		}
 	}
