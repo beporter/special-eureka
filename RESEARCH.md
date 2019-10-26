@@ -3,12 +3,19 @@
 A place to start organizing my thoughts around this project.
 
 
+## Known Limits
+
+These influence how to store data like file/total size.
+
+* [Operating system maximum disk size limits](https://www.hardwaresecrets.com/hard-disk-drives-capacity-limits/6/)
+* `stat.st_size` [libc](https://pubs.opengroup.org/onlinepubs/009695399/functions/stat.html), [darwin](https://github.com/apple/darwin-xnu/blob/master/bsd/sys/stat.h), [linux](https://linux.die.net/man/2/stat), [FreeBSD](https://www.freebsd.org/cgi/man.cgi?query=stat&sektion=2)
+
 ## Prior Art
 
 Apps that already have to scan files/directories recursively.
 
 * [qDirStat](https://github.com/shundhammer/qdirstat)
-* [`du`](https://git.savannah.gnu.org/cgit/coreutils.git/tree/src/du.c)
+* [`du`](https://github.com/coreutils/coreutils/blob/master/src/du.c)
 * [Duc](https://github.com/zevv/duc)
 * [nftw](https://stackoverflow.com/a/472727/70876)
 * [readdir example](https://stackoverflow.com/a/30379506/70876)
@@ -35,7 +42,7 @@ Apps that already have to scan files/directories recursively.
 
 * Data to store:
   * dir basename
-  * full path?
+  * full path? inode?
   * pointer to parent
   * cumulative size (bytes) might not be calculated yet.
   * list of immediate children?
