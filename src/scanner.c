@@ -40,12 +40,11 @@ int dirSize(char* path, unsigned long long* sum) {
     // Process directories.
     if (dirData->d_type == DT_DIR) {
       // Skip `.` and `..`.
-      if (dirData->d_name[0] == '.') {
+      if (strncmp(dirData->d_name, ".", 3) == 0 || strncmp(dirData->d_name, "..", 3) == 0) {
         //fprintf(stderr, "dirSize(): Skipping .|.. dir.\n");
         continue;
       }
 
-      fprintf(stderr, "dirSize(): Directory: %s\n", dirData->d_name);
       strcpy(currentEntry, path);
       strcat(currentEntry, "/");
       strcat(currentEntry, dirData->d_name);
