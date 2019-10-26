@@ -8,6 +8,7 @@ See [RESEARCH.md](RESEARCH.md).
 ## Requirements
 
 * gcc
+* golang
 * make
 
 
