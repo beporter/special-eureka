@@ -45,7 +45,6 @@ int dirSize(char* path, unsigned long long* sum) {
         continue;
       }
 
-      fprintf(stderr, "dirSize(): Directory: %s\n", dirData->d_name);
       strcpy(currentEntry, path);
       strcat(currentEntry, "/");
       strcat(currentEntry, dirData->d_name);
