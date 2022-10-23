@@ -9,6 +9,7 @@ See [RESEARCH.md](RESEARCH.md).
 
 * gcc
 * golang
+* rustc
 * make
 
 
@@ -23,4 +24,4 @@ To remove build artifacts:
 
 ## License & Copyright Notice
 
-Copyright &copy; 2019 Brian Porter. This project is **not** currently licensed for any use.
+Copyright &copy; 2022 Brian Porter. This project is **not** currently licensed for any use.
