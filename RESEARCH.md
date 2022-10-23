@@ -46,3 +46,10 @@ Apps that already have to scan files/directories recursively.
   * pointer to parent
   * cumulative size (bytes) might not be calculated yet.
   * list of immediate children?
+
+## Cross platform frontends
+
+- [Electron]() - (JS can't handle memory requirements for storing large dir scan data.)
+  - [Showcase apps](https://www.electronjs.org/apps)
+- [Tauri](https://tauri.app/v1/guides/getting-started/setup/) - (Rust core, html/css/js frontend. Possibly a winner?)
+  - [Article about Electron vs Tauri](https://betterprogramming.pub/adi%C3%B3s-electron-a-rust-powered-alternative-has-arrived-and-its-lovely-bd26262dcf1a?gi=7d709d22373f)
